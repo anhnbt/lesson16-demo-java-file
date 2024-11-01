@@ -11,14 +11,10 @@ import java.util.*;
  * Time: 08:56
  */
 public class FileMng {
-    public static void write(File file, String s) {
-        try {
-            FileWriter writer = new FileWriter(file);
-            writer.write(s);
-            writer.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public static void write(File file, String s) throws IOException {
+        FileWriter writer = new FileWriter(file);
+        writer.write(s);
+        writer.close();
     }
 
     public static List<Contact> read(File file) {

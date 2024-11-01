@@ -1,5 +1,6 @@
 package org.example;
 
+import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -10,7 +11,9 @@ import java.util.Date;
  * Date: 2024/10/30
  * Time: 09:31
  */
-public class Contact {
+public class Contact implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     private String phone;
     private String group;
     private String name;
